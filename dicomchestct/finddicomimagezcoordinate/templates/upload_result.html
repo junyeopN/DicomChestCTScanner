@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+      <div id="left">
+        <h2>Input a .zip File</h2>
+           <p style="font-size: 13pt; margin-top: 15%;"> <b> The Z Coordinates For the CT you requested is now finished. The result is shown on the Table at the right: </b> </p>
+        <ul>
+            {% load static %}
+            <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        </ul>
+      </div>
+
+      <div id="middle">
+          <b>&#8594</b>
+      </div>
+
+      <div id="right">
+          <h1> Result: </h1>
+          <table bordercolor="blue" align="center">
+            <th>Z Coordinate</th>
+            <th>Value</th>
+
+            <tr><!-- 첫번째 줄 시작 -->
+                <td>Image Top Z</td>
+                <td>137</td>
+            </tr><!-- 첫번째 줄 끝 -->
+
+            <tr><!-- 두번째 줄 시작 -->
+                <td>Lung Top Z</td>
+                <td>122</td>
+            </tr><!-- 두번째 줄 끝 -->
+
+            <tr><!-- 세번째 줄 시작 -->
+                <td>Lung Bottom Z</td>
+                <td>53</td>
+            </tr><!-- 세번째 줄 끝 -->
+
+            <tr><!-- 네번째 줄 시작 -->
+                <td>Image Bottom Z</td>
+                <td>33</td>
+            </tr><!-- 네번째 줄 끝 -->
+          </table>
+      </div>
+
+{% endblock %}

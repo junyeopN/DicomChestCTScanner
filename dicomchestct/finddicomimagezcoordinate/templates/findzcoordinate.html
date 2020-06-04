@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>DicomChestScanner Project Website</h1>
+  <p>Welcome to DicomChestScanner Project </p>
+  <h2>Input .zip File</h2>
+  <p>Put in the .zip file that has the dicom images of the Patient you need the z-coordinate for:</p>
+  <ul>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+     <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="myfile">Upload</button>
+    </form>
+  </ul>
+{% endblock %}

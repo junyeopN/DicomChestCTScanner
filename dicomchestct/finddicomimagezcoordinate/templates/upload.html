@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+      <div id="left">
+        <h2>Input a .zip File</h2>
+          <p> <b> Put in the .zip file that has the dicom images of the Patient you need the z-coordinate for: </b> </p>
+        <ul>
+            {% load static %}
+            <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+            <form method="post" enctype="multipart/form-data">
+                 {% csrf_token %}
+                 {{ form.as_p }}
+                 <button type="submit" name="myfile">Upload</button>
+            </form>
+        </ul>
+      </div>
+
+      <div id="middle">
+          <b>&#8594</b>
+      </div>
+
+
+{% endblock %}
